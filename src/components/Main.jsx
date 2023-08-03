@@ -1,5 +1,5 @@
 import React from 'react'
-import Images from '.'
+import Projects from '../utils/projects';
 
 const Main = () => {
     {
@@ -179,14 +179,14 @@ const Main = () => {
     }
 
 
-    const Photo = Images.map(image => {
+    const Photo = Projects.map(project => {
         return (
-            <img className="content__img" key={image.id} src={image.image} alt="Some image" />
+            <img className="content__img" key={project.id} src={project.image} alt={project.name} />
           )
       })
 
   return (
-    <main className="content">
+    <main className="content overflow-hidden" >
       {Photo}
       <h3>Hi, My name is</h3>
       <h1>LLOYD CARIE</h1>
